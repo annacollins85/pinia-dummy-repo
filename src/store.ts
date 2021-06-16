@@ -4,23 +4,20 @@ export const useStoreFactory = () => {
   return defineStore({
     id: 'store',
     state: () => ({
-      tokenInformation: 'hello',
-      authApiState: false
+      password: 'default'
     }),
     actions: {
-      async login() {
+      async printPassword() {
         try {
-          console.log('in login', this.tokenInformation)
-          this.authApiState = true
+          console.log('in login', this.password)
         } catch (err) {
           console.log(err)
         }
       },
-      async checkSupervisorPassword() {
+      async changePassword() {
         try {
-          this.tokenInformation = 'another'
-          console.log('in check', this.tokenInformation)
-          console.log('auth in check', this.authApiState)
+          this.password = 'changed'
+          console.log('this.password in changePassword', this.password)
         } catch (err) {
           console.log(err)
         }

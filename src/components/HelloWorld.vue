@@ -1,7 +1,7 @@
 <template>
   <div class="hello">
-    <button @click="login">Login</button>
-    <button @click="checkSupervisorPassword">Check</button>
+    <button @click="printPassword">Print Password</button>
+    <button @click="changePassword">Change Password</button>
   </div>
 </template>
 
@@ -17,8 +17,8 @@ export default defineComponent({
   setup() {
     const store = useStore()
     return {
-      login: store.login,
-      checkSupervisorPassword: store.checkSupervisorPassword
+      printPassword: store.printPassword,
+      changePassword: store.changePassword
     }
   }
 });
